@@ -1,0 +1,28 @@
+.moviecontent-card {
+    display: none;
+    position: absolute;
+    max-width: 150px;
+    max-height: 270px; 
+    background-color: rgba(1, 1, 1, 0.7);
+    z-index: 500;
+}
+
+.content-introduction {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 270px;
+    overflow-y: auto; 
+}
+
+.moviecontent-title {
+    margin: 30px 10px 20px 10px;
+    font-size: 10px;
+    color: #EFF4F5
+}
+
+.moviecontent-content {
+    margin: 0px 10px 0px 10px;
+    font-size: 10px;
+    color: #EFF4F5
+}

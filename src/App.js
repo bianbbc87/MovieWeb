@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Movie from './component/Movie';
+import MovieContent from './component/MovieContent';
+import { movies } from './movieDummy';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="container">
+    <div className="grid-container">
+    <div className="movie-item">
+    {
+      movies.results.map((item) => {
+        return (
+          <div key={item.id} className="movie">
+            <MovieContent movieData={item} className="movie-content"/>
+            <Movie movieData={item} className="kind-movie"/>
+          </div>
+        )
+      })
+    }
+  </div>
+  </div>
+  </div>
   );
 }
 
