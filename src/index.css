@@ -5,13 +5,19 @@ main{
 }
 
 .container {
+overflow-x: auto;
 max-width: auto;
 max-height: auto;
-padding: 20px;
+padding-top: 20px;
 }
+
+.container::-webkit-scrollbar {
+  display: none;
+  }
 
 .movie-item {
   display: grid;
-  grid-template-columns: repeat(8, minmax(170px, 1fr));
+  grid-template-columns: repeat(8, minmax(160px, 1fr));
   gap: 20px 0;
 }
+
