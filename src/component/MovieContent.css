@@ -1,5 +1,4 @@
 .moviecontent-card {
-    display: none;
     position: absolute;
     max-width: 150px;
     max-height: 270px; 
@@ -13,6 +12,10 @@
     width: 150px;
     height: 270px;
     overflow-y: auto; 
+}
+
+.content-introduction::-webkit-scrollbar {
+    display: none;
 }
 
 .moviecontent-title {

@@ -1,13 +1,10 @@
 import './MovieContent.css';
 
 
-function MovieContent({movieData}) {
+function MovieContent({movieContentData}) {
 
-    const {
-        title,                // 영화 제목
-        overview,             // 요약 설명
-      } = movieData;
-
+  const {title, overview} = movieContentData;
+  
     return (
         <div className="moviecontent-card">
         <div className="content-introduction">

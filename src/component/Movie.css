@@ -36,3 +36,11 @@
     color: #EFF4F5;
 }
 
+.movie-content {
+    display: none;
+}
+
+.movie-card:hover .movie-content{
+    display: block;
+    z-index: 500;
+}
