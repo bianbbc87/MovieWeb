@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { S } from './Movie.style';
 import MovieContent from './MovieContent';
 
-function Movie({movieData}) {
+function MovieCards({movieData}) {
   const [ishovered, setIsHovered] = useState(false);
 
     const {
@@ -35,4 +35,4 @@ function Movie({movieData}) {
     )
   }
   
-  export default Movie
+  export default MovieCards
