@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
-import Movie from './component/Movie/Movie';
-import { movies } from './movieDummy';
-
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Header from './component/Header';
+import  Movie from './pages/Movie';
+import TV from './pages/TV';
+import Celeirity from './pages/Celeirity';
+import Home from './pages/Home';
 function App() {
 
   return (
-    <main> 
-    <div className="container">
-    <div className="movie-item">
-    {
-      movies.results.map((item) => {
-        return (
-          <div key={item.id} className="movie">
-            <Movie movieData={item} className="kind-movie"/>
-          </div>
-        )
-      })
-    }
-  </div>
-  </div>
-  </main>
+      <div className="root-wrap">
+        <BrowserRouter>
+        <Header />
+        <Routes>
+        <Route path="/" element={<Home/>}></Route>
+          <Route path="/movie" element={<Movie/>}></Route>
+          <Route path="/tv" element={<TV/>}></Route>
+          <Route path="/actor" element={<Celeirity/>}></Route>
+        </Routes>
+        </BrowserRouter>
+      </div>
 
   );
 }
