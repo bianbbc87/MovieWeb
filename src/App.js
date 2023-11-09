@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from './component/Header';
 import  Movie from './pages/Movie';
@@ -6,6 +6,8 @@ import TV from './pages/TV';
 import Celeirity from './pages/Celeirity';
 import Home from './pages/Home';
 import MovieDetail from './pages/MovieDetail';
+import NotFound from './pages/NotFound';
+
 function App() {
 
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/tv" element={<TV/>}></Route>
           <Route path="/actor" element={<Celeirity/>}></Route>
           <Route path="/movie/:id" element={<MovieDetail/>}></Route>
+
+          <Route path="*" element={<NotFound/>}></Route>
         </Routes>
         </BrowserRouter>
       </div>

@@ -6,27 +6,26 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
+    padding-left: 10%;
+    padding-top: 1%;
 `
 
 // 490px 750px
 const MoviePoster = styled.div`
-    margin-left: 150px;
-    margin-top: 50px;
-    width: 300px;
-    height: 600px;
+    width: 490px;
+    height: 750px;
     background-size: cover;
     background-image: url(${props => props.url});
     `
 
 const MovieTitle = styled.div`
-    margin-top: 50px;
     font-size: 21px;
     font-weight: 600;
     `
 
 export default function MovieDetail() {
 
-    // url로 넘겨받은 title
+    // url로 넘겨받은 id 근데 있을필요 없는듯?
     const {id} = useParams();
 
     // 네비게이트 훅을 통해 페이지 이동 시 넘겨받은 정보들(state)
