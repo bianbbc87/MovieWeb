@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const LoginButton = styled.button`
 background-color: white;
@@ -14,15 +15,18 @@ color: white;
 `
 
 export default function LoginControl() {
+  const navigate = useNavigate();
 
     const [isLoggedIn, setIsLoggedIn] = useState(true);
 
     function handleLoginClick() {
         setIsLoggedIn(false);
+        navigate('/login');
     }
 
     function handleLogoutClick() {
         setIsLoggedIn(true);
+        navigate('/');
     }
 
   return (
