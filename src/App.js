@@ -7,6 +7,7 @@ import Celeirity from './pages/Celeirity';
 import Home from './pages/Home';
 import MovieDetail from './pages/MovieDetail';
 import NotFound from './pages/NotFound';
+import TvDetail from './pages/TvDetail';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/tv" element={<TV/>}></Route>
           <Route path="/actor" element={<Celeirity/>}></Route>
           <Route path="/movie/:id" element={<MovieDetail/>}></Route>
+          <Route path="/tv/:id" element={<TvDetail/>}></Route>
 
           <Route path="*" element={<NotFound/>}></Route>
         </Routes>

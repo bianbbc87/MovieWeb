@@ -1,6 +1,6 @@
 import React from 'react'
 import { movies } from '../movieDummy';
-import MovieCards from '../component/Movie/MovieCards';
+import Contents from '../component/Contents';
 import { useNavigate } from 'react-router-dom';
 
 export default function Movie() {
@@ -8,6 +8,7 @@ export default function Movie() {
   const navigate = useNavigate();
 
 
+  // props를 객체로 주지 않으면 값 전달이 안됨.
   const onClickMovie = (movie) => {
     // 값 오는지 확인
     console.log("title = ", movie.title, " id = ", movie.id);
@@ -31,7 +32,7 @@ export default function Movie() {
           key={item.id} 
           className="movie" 
           onClick={() => onClickMovie(item)}>
-            <MovieCards movieData={item} className="kind-movie"/>
+            <Contents contentData={item} className="kind-movie"/>
           </div>
         )
       })

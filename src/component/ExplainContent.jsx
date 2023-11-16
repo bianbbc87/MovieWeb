@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MoviecontentCard = styled.div`
+const ContentCard = styled.div`
   display: block;
   position: absolute;
   max-width: 150px;
@@ -21,30 +21,31 @@ const ContentIntroduction = styled.div`
   }
 `
 
-const MoviecontentTitle = styled.h2`
+const ContentTitle = styled.h2`
   margin: 30px 10px 20px 10px;
   font-size: 10px;
   color: #EFF4F5
 `
 
-const MoviecontentContent = styled.div`
+const ContentContent = styled.div`
   margin: 0px 10px 0px 10px;
   font-size: 10px;
   color: #EFF4F5
 `
 
-function MovieContent({movieContentData}) {
+function ExplainContent({contentData}) {
 
-  const {title, overview} = movieContentData;
+  const {title, name, overview} = contentData;
   
     return (
-        <MoviecontentCard>
+        <ContentCard>
         <ContentIntroduction>
-        <MoviecontentTitle>{title}</MoviecontentTitle> 
-        <MoviecontentContent>{overview}</MoviecontentContent>
+        <ContentTitle>{title}</ContentTitle> 
+        <ContentTitle>{name}</ContentTitle> 
+        <ContentContent>{overview}</ContentContent>
         </ContentIntroduction>
-        </MoviecontentCard>
+        </ContentCard>
     )
   }
   
-  export default MovieContent
+  export default ExplainContent

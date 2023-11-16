@@ -1,8 +1,7 @@
 import React from 'react'
 import { useLocation, useParams } from 'react-router-dom';
 import { S } from '../component/DetailStyle';
-
-export default function MovieDetail() {
+export default function TvDetail() {
 
     // url로 넘겨받은 id 근데 있을필요 없는듯?
     const {id} = useParams();
@@ -12,7 +11,7 @@ export default function MovieDetail() {
   return (
     <S.Container>
       <S.Poster url={state.posterImageUrl} />
-      <S.Title>{state.title}</S.Title>
+      <S.Title>{state.name}</S.Title>
     </S.Container>
   )
 }

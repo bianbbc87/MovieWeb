@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MovieCard = styled.div`
+const Card = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 150px;
@@ -16,7 +16,7 @@ const ContentContainer = styled.div`
 display: ${props => (props.isDisplay ? 'block' : 'none')};
 `
 
-const MoviePoster = styled.div`
+const Poster = styled.div`
     width: 150px;
     height: 300px;
     background-size: cover;
@@ -31,28 +31,35 @@ const Introduction = styled.div`
     align-items: center;
 `
 
-const MovieTitle = styled.h2`
+const Title = styled.h2`
     padding-left: 10px;
     font-size: 10px;
     color: #EFF4F5;
 `
 
-const MovieScore = styled.div`
+const Name = styled.h2`
+    padding-left: 10px;
+    font-size: 10px;
+    color: #EFF4F5;
+`
+
+const Score = styled.div`
     font-size: 10px;
     padding: 8px;
     color: #EFF4F5;
 `
 
-const MovieContent = styled.div`
+const Content = styled.div`
     display: none;
 `
 
 export const S = {
-    MovieCard,
-    MoviePoster,
+    Card,
+    Poster,
     Introduction,
-    MovieTitle,
-    MovieScore,
-    MovieContent,
+    Title,
+    Name,
+    Score,
+    Content,
     ContentContainer
 }
