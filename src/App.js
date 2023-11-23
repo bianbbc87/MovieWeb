@@ -9,6 +9,7 @@ import MovieDetail from './pages/MovieDetail';
 import NotFound from './pages/NotFound';
 import TvDetail from './pages/TvDetail';
 import Login from './pages/Login';
+import CityPage from './pages/CityPage';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/movie/:id" element={<MovieDetail/>}></Route>
           <Route path="/tv/:id" element={<TvDetail/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
+          <Route path="/city" element={<CityPage/>}></Route>
 
           <Route path="*" element={<NotFound/>}></Route>
         </Routes>

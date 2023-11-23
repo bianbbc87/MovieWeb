@@ -31,6 +31,7 @@ export default function Header() {
 <NavigationButton to = "/movie">영화</NavigationButton>
 <NavigationButton to = "/tv">TV 프로그램</NavigationButton>
 <NavigationButton to = "/actor">인물</NavigationButton>
+<NavigationButton to = "/city">도시</NavigationButton>
 <LoginControl />
     </Container>
   )
