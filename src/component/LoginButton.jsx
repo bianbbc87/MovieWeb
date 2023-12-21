@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { S } from "./LoginStye";
 import Loading from "./Loading";
@@ -10,7 +10,6 @@ export default function LoginButton() {
   const [iderrorMsg, setidErrorMsg] = useState("");
   const [pwerrorMsg, setpwErrorMsg] = useState("");
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState();
   const [userInfo, setUserInfo] = useState({
     id: "",
     pw: "",
@@ -68,8 +67,9 @@ export default function LoginButton() {
         console.log("성공 : ", response.status);
       }
 
+      console.log(response);
+
       localStorage.setItem("token", response.data.result.AccessToken);
-      setStatus(response.status);
 
       // getToken();
 
